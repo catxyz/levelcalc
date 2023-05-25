@@ -45,6 +45,8 @@ public class Main {
         out("| Enter avg. time it takes to complete a game (minutes):");
         avgGameTime = scanner.nextDouble();
         newLine();
+
+        scanner.close();
     }
 
     private static void printResults() {
