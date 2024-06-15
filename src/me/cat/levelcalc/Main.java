@@ -17,7 +17,12 @@ public class Main {
     private static double avgGameTime;
 
     public static void main(String[] args) {
-        getInfo();
+        try {
+            getInfo();
+        } catch (Exception ex) {
+            System.err.println("| Error! I was expecting a number, or something else");
+            return;
+        }
         printResults();
     }
 
