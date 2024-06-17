@@ -57,11 +57,11 @@ public class Main {
 
     private static void printResults() {
         out("------------------------------------");
-        out("Games left to level 100       : " + format(calculateGamesLeft()));
-        out("Games required per day        : " + format(calculateGamesPerDay()));
-        out("Time it'll take daily (hours) : " + format(calculateDailyTimeRequirement()) + 'h');
-        out("Percentage to level 100       : " + format(calculatePercentage()) + '%');
-        out("Exp left                      : " + format(expLeft));
+        out("Games left to level 100       -> " + format(calculateGamesLeft()));
+        out("Games required per day        -> " + format(calculateGamesPerDay()));
+        out("Time it'll take daily (hours) -> " + format(calculateDailyTimeRequirement()) + 'h');
+        out("Percentage to level 100       -> " + format(calculatePercentage()) + '%');
+        out("Exp left                      -> " + format(expLeft));
         out("------------------------------------");
     }
 
