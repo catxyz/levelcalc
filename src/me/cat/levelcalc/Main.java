@@ -31,24 +31,24 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         newLine();
 
-        out("| Enter your current ExpEarned:");
+        out("| Enter your current ExpEarned ->");
         currentExpEarned = scanner.nextInt();
         expLeft = EXP_CONST - currentExpEarned;
         newLine();
 
-        out("| Enter any exp you wish to subtract:");
+        out("| Enter any exp you wish to subtract ->");
         expToSubtract = scanner.nextInt();
         newLine();
 
-        out("| Enter avg. exp earned per game\n" + "  from the game you play:");
+        out("| Enter avg. exp earned per game\n" + "  from the game you play ->");
         avgExpPerGame = scanner.nextInt();
         newLine();
 
-        out("| Enter the time span for achieving this (days):");
+        out("| Enter the time span for achieving this (days) ->");
         daysSpan = scanner.nextDouble();
         newLine();
 
-        out("| Enter avg. time it takes to complete a game (minutes):");
+        out("| Enter avg. time it takes to complete a game (minutes) ->");
         avgGameTime = scanner.nextDouble();
         newLine();
 
