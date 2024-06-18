@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Main {
 
     private static final int EXP_CONST = 10_672_500;
-    private static final double SENTINEL_FALLBACK = -1.0;
+    private static final double DUMMY_FALLBACK_VALUE = -1.0;
 
     private static int currentExpEarned;
     private static int expLeft;
@@ -67,14 +67,14 @@ public class Main {
 
     public static double calculateGamesLeft() {
         if (avgExpPerGame == 0) {
-            return SENTINEL_FALLBACK;
+            return DUMMY_FALLBACK_VALUE;
         }
         return ((double) expLeft - expToSubtract) / avgExpPerGame;
     }
 
     public static double calculateGamesPerDay() {
         if (avgExpPerGame == 0 || daysSpan == 0) {
-            return SENTINEL_FALLBACK;
+            return DUMMY_FALLBACK_VALUE;
         }
         return (((double) expLeft - expToSubtract) / avgExpPerGame) / daysSpan;
     }
@@ -82,8 +82,8 @@ public class Main {
     public static double calculateDailyTimeRequirement() {
         double gamesPerDay = calculateGamesPerDay();
 
-        if (gamesPerDay == SENTINEL_FALLBACK) {
-            return SENTINEL_FALLBACK;
+        if (gamesPerDay == DUMMY_FALLBACK_VALUE) {
+            return DUMMY_FALLBACK_VALUE;
         }
         return (gamesPerDay * avgGameTime) / 60.0;
     }
@@ -101,7 +101,7 @@ public class Main {
     }
 
     private static String format(double number) {
-        if (number == SENTINEL_FALLBACK) {
+        if (number == DUMMY_FALLBACK_VALUE) {
             return "???";
         }
 
